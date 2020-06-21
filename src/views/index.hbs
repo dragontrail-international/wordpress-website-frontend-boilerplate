@@ -1,0 +1,36 @@
+{{#extend "master" }}
+
+  {{#content "header"}}
+    <h1>header </h1>
+
+    <div>
+
+    {{#if isProd }}
+        <p><span>{{ isProd }}</span></p>
+    {{/if }}
+    <div>
+
+  {{/content}}
+
+  {{#content "content"}}
+      <div>main content 123</div>
+
+      <i class="fas fa-user"></i>
+      <i class="fas fa-users"></i>
+
+      <img src="../assets/images/testing-image.png" />
+
+      <div id="vueApp">
+        <AppBanner />
+      </div>
+
+  {{/content}}
+
+  {{#content "footer" mode="prepend"}}
+      <p>MIT License</p>
+  {{/content}}
+
+
+  {{> nav-menu }}
+
+{{/extend}}
