@@ -1,0 +1,38 @@
+{{#extend 'test-layout' }}
+
+  {{#content 'content' }}
+
+    {{> page-navbar }}
+
+    <h1>testing page</h1>
+
+    <p>编译流程专用测试页面</p>
+
+    <div class='container'>
+      <div class='box box-with-background-image'>
+      </div>
+      box with background image
+    </div>
+
+    <div class='container'>
+      <div class='box box-with-inline-background-image'
+           style='background-image: url(./images/test-image.jpg)'
+      >
+      </div>
+      box with inline background image, may fail
+    </div>
+
+    <div class='container'>
+      <div class='box box-with-an-image-inside'>
+        <img src='images/test-image.jpg' alt='test-image.jpg'>
+      </div>
+    </div>
+
+    <!-- test vue app -->
+    <div id='vueApp'></div>
+
+    {{> page-footer }}
+
+  {{/content}}
+
+{{/extend}}

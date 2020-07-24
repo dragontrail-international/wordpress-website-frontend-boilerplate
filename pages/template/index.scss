@@ -1,0 +1,23 @@
+@import '../../assets/scss/includes';
+
+.page-content-mobile,
+.page-content-desktop {
+  display: none;
+}
+
+// mobile
+@media (max-width: $screen-desktop - 1px) {
+  .page-content-mobile {
+    display: block;
+  }
+
+  @import "index-mobile";
+}
+
+// desktop
+@media (min-width: $screen-desktop) {
+  .page-content-desktop {
+    display: block;
+  }
+  @import "index-desktop";
+}

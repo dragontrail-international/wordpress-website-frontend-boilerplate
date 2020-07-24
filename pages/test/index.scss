@@ -1,0 +1,22 @@
+.box {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  border: 1px solid purple;
+
+  &.box-with-background-image {
+
+    background: transparent url(images/test-image.jpg) 0 0 no-repeat;
+  }
+
+  &.box-with-an-image-inside {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+

@@ -1,0 +1,5 @@
+window.mobileView$.subscribe(() => {
+
+
+
+})

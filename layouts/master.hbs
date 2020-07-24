@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="breakpoint" content="1024">
+
+  <title>{{#block "title"}}网站默认标题{{/block}}</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/static/favicon/site.webmanifest">
+
+  <!-- 全局样式, 其实都为第三方样式, 详见 webpack 配置 -->
+  <link rel='stylesheet' href='/static/bootstrap/bootstrap.min.css'>
+  <link rel='stylesheet' href='/static/swiperjs/swiper.min.css'>
+  <link rel='stylesheet' href='/static/fontawesome/css/all.min.css'>
+  
+
+  <!-- 修改 html 根节点字体大小, 移动端 与 PC 端根据 UI 稿分别等比缩放 -->
+  <script>
+    (function () {
+      const setHtmlRootFontSize = function () {
+
+        // 0 <= screenWidth < 1024 移动端等比缩略
+        // 1024 <= screenWidth < 1680 PC端等比缩略
+        // 1680 <= screenWidth PC端不等比缩略
+        if (window.innerWidth < 1024) {
+          document.querySelector('html').style.fontSize = window.innerWidth / 750 * 100 + 'px'
+        } else if (window.innerWidth < 1680) {
+          document.querySelector('html').style.fontSize = window.innerWidth / 1680 * 100 + 'px'
+        } else {
+          document.querySelector('html').style.fontSize = '100px'
+        }
+      }
+
+      setHtmlRootFontSize()
+
+      // 窗口缩放就重算
+      window.addEventListener('resize', setHtmlRootFontSize)
+    })()
+  </script>
+
+</head>
+<body>
+
+
+{{#block "content"}}{{/block}}
+
+
+<script src='/static/jquery-3.5.1.slim.min.js'></script>
+<script src='/static/bootstrap/bootstrap.bundle.min.js'></script>
+<script src='/static/swiperjs/swiper.min.js'></script>
+
+</body>
+</html>

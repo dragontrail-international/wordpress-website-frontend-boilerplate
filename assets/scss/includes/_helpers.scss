@@ -1,0 +1,72 @@
+.hidden {
+  display: none !important;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// line clamp, 2 ~ 3 lines
+@for $i from 2 through 3 {
+  .line-clamp-#{$i} {
+    display: -webkit-box;
+    -webkit-line-clamp: $i;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// line clamp mixin
+@mixin line-clamp($i) {
+  display: -webkit-box;
+  -webkit-line-clamp: $i;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// 10 ~ 200
+@for $i from 1 through 20 {
+  .vertical-push-#{$i * 10} {
+    height: #{$i}0rem;
+  }
+}
+
+.cf,
+.clearfix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// 开发专用的几个类
+.bd1 {
+  border: 1px solid deeppink;
+}
+
+.bd2 {
+  border: 1px solid #00b600;
+}
+
+.bd3 {
+  border: 1px solid #00c6f3;
+}
+
+
+// 类似 ng-cloak, 防止 FOUC
+.cloak {
+  opacity: 0!important;
+}

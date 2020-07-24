@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="breakpoint" content="1024">
+
+  <title>{{#block "title"}}网站默认标题{{/block}}</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/static/favicon/site.webmanifest">
+
+  <!-- 全局样式, 其实都为第三方样式, 详见 webpack 配置 -->
+  <link rel='stylesheet' href='/static/bootstrap/bootstrap.min.css'>
+  <link rel='stylesheet' href='/static/swiperjs/swiper.min.css'>
+  <link rel='stylesheet' href='/static/fontawesome/css/all.min.css'>
+
+</head>
+<body>
+
+
+{{#block "content"}}{{/block}}
+
+
+<script src='/static/jquery-3.5.1.slim.min.js'></script>
+<script src='/static/bootstrap/bootstrap.bundle.min.js'></script>
+<script src='/static/swiperjs/swiper.min.js'></script>
+
+
+</body>
+</html>
