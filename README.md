@@ -40,7 +40,7 @@
 - 为保证依赖安装速度, 使用 [Yarn](https://yarnpkg.com) 管理依赖.
 - 为保证开发时的编译速度, 尽量一次专注编译一个视图.
 - 使用了 [Webpack](https://webpack.js.org) 打包编译到 `dist` 发布目录. 在 `webpack.common.js` 里配置, 便生产环境编译时可将视图与静态资源打包到其它目录.
-- 视图使用 [handlebars](https://handlebarsjs.com) 模版, 增加了 `layout` 风格 `partial`, 所以对 handlebars 来说, `layout` 与 `partial` 目录里的文件都叫 `partial`. ps: handlebars 文档里提到的用 `partial` 语法在 webpack 下无法正常编译出来, 欢迎 pull request.
+- 视图使用 [handlebars](https://handlebarsjs.com) 模版, 增加了 `layout` 风格 `partial`, 所以对 handlebars 来说, `layout` 与 `partial` 目录里的文件都叫 `partial`. ps: handlebars 文档里提到的用 `partial` 语法实现 `layout` 在 webpack 下无法正常编译出来, 欢迎 pull request.
 - 默认引入了 [Vue](https://vuejs.org) 处理复杂交互场景.
 - 在页面引用 `assets` 目录里的样式或图片时使用 `~assets` 作为路径前缀,  `partials/page-navbar.hbs` 里的 `<img src="~assets/images/site-logo.png" />`.
 - 参考 UI 风格决定使用 [bootstrap](https://getbootstrap.com) 或 [reset-css](https://www.npmjs.com/package/reset-css) 或 [normalize.css](https://www.npmjs.com/package/normalize.css).
